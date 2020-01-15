@@ -8,4 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="A2" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="A3" parent="AppTheme">
+        <item name="colorPrimary">#FF3344</item>
+        <item name="colorPrimaryDark">#FF3344</item>
+        <item name="colorAccent">#FF3344</item>
+    </style>
+
+    <style name="A4" parent="AppTheme">
+        <item name="colorPrimary">#5566FF</item>
+        <item name="colorPrimaryDark">#5566FF</item>
+        <item name="colorAccent">#5566FF</item>
+    </style>
+
 </resources>

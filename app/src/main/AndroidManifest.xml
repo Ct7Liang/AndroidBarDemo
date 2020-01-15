@@ -9,21 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".songList.DetailActivity">
-
+        <activity
+            android:name=".songList.DetailActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".songList.Main2Activity"
+            android:theme="@style/A2"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".songList.Main3Activity"
+            android:theme="@style/A3"/>
+        <activity
+            android:name=".songList.Main4Activity"
+            android:theme="@style/A4"/>
+        <activity android:name=".songList.Main5Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-        <activity android:name=".MainActivity">
-
-        </activity>
-
+        <activity android:name=".songList.Main6Activity"/>
     </application>
 
 </manifest>

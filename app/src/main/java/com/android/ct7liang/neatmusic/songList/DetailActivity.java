@@ -8,6 +8,7 @@ import android.view.WindowManager;
 
 import com.android.ct7liang.neatmusic.R;
 import com.android.ct7liang.neatmusic.base.BaseActivity;
+import com.ct7liang.tangyuan.utils.ScreenUtil;
 
 public class DetailActivity extends BaseActivity {
 
@@ -20,6 +21,9 @@ public class DetailActivity extends BaseActivity {
 
     @Override
     public void initSurface() {
+
+//        SoftHideKeyBoardUtil.assistActivity(this);
+
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
             return;
         }
@@ -33,11 +37,29 @@ public class DetailActivity extends BaseActivity {
         } else {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+
+//        setStatusBarLightMode(this, false);
+
+        findViewById(R.id.top_bar).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0, 0);
+
     }
 
     @Override
     public void onClick(View view) {
 
     }
+
+//    public static void setStatusBarLightMode(Activity activity, boolean isLightMode) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            Window window = activity.getWindow();
+//            int option = window.getDecorView().getSystemUiVisibility();
+//            if (isLightMode) {
+//                option |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+//            } else {
+//                option &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+//            }
+//            window.getDecorView().setSystemUiVisibility(option);
+//        }
+//    }
 
 }
