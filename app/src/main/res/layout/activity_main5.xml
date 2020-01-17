@@ -4,7 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".songList.Main5Activity">
+    tools:context=".child.Main5Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:text="对指定的window设置了该属性之后"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/explain5_1"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/explain5_2"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentBottom="true"
@@ -12,33 +37,32 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="弹窗存在,依然可以使用后面的输入框"/>
+
         <Button
+            android:onClick="onClick"
             android:id="@+id/btn1"
+            android:text="测试按钮"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="Dialog"
-            android:textAllCaps="false"/>
+            android:layout_height="wrap_content" />
 
         <Button
+            android:onClick="onClick"
             android:id="@+id/btn2"
+            android:text="打开默认弹窗"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="PopupWindow"
-            android:textAllCaps="false"/>
+            android:layout_height="wrap_content" />
 
         <Button
+            android:onClick="onClick"
             android:id="@+id/btn3"
+            android:text="打开测试弹窗"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="startActivity"
-            android:textAllCaps="false"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-
-
 </RelativeLayout>
-

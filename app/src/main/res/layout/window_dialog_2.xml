@@ -12,12 +12,4 @@
         android:text="这是一个窗口"
         android:background="#FFFFFF"/>
 
-    <Button
-        android:id="@+id/btn"
-        android:text="关闭"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
-
 </RelativeLayout>

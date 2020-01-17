@@ -1,107 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.ct7liang.neatmusic.songList.TranslateLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:fitsSystemWindows="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:context=".child.Main2Activity">
 
     <LinearLayout
-        android:id="@+id/tabBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FF5566">
+        android:orientation="vertical"
+        android:padding="10dp">
         <TextView
+            android:text="对指定window设置了该属性之后"
+            android:textSize="13sp"
+            android:textColor="#333333"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-
-            android:text="标题栏"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"/>
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/explain1_1"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <ScrollView
-        android:layout_below="@id/tabBar"
-        android:overScrollMode="never"
-        android:scrollbars="none"
+    <LinearLayout
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <EditText
-                android:id="@+id/e1"
-                android:hint="edit_input(1)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="normal"/>
-            <EditText
-                android:id="@+id/e2"
-                android:hint="edit_input(2)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionUnspecified"/>
-            <EditText
-                android:id="@+id/e3"
-                android:hint="edit_input(3)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionNone"/>
-            <EditText
-                android:id="@+id/e4"
-                android:hint="edit_input(4)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionGo"/>
-            <EditText
-                android:id="@+id/e5"
-                android:hint="edit_input(5)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionSearch"/>
-            <EditText
-                android:id="@+id/e6"
-                android:hint="edit_input(6)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionSend"/>
-            <EditText
-                android:id="@+id/e7"
-                android:hint="edit_input(7)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionNext"/>
-            <EditText
-                android:id="@+id/e8"
-                android:hint="edit_input(8)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionDone"/>
-            <EditText
-                android:id="@+id/e9"
-                android:hint="edit_input(9)"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:singleLine="true"
-                android:imeOptions="actionPrevious"/>
-        </LinearLayout>
-    </ScrollView>
+            android:layout_alignParentBottom="true"
+            android:text="默认方式弹窗"
+            android:textAllCaps="false"/>
 
-</com.android.ct7liang.neatmusic.songList.TranslateLayout>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="修改弹窗后的背景透明度"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="清除该标记(无背景透明度)之后的弹窗"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,3 +1,55 @@
 <resources>
-    <string name="app_name">NeatMusic</string>
+    <string name="app_name">WindowFlags</string>
+
+    <string name="btn1">FLAG_ALLOW_LOCK_WHILE_SCREEN_ON</string>
+    <string name="explain1_1">1.当该window显示的时候,置于该window之后的window会变暗。</string>
+
+    <string name="btn2">FLAG_DIM_BEHIND</string>
+
+    <string name="btn3">FLAG_BLUR_BEHIND</string>
+
+    <string name="btn4">FLAG_NOT_FOCUSABLE</string>
+    <string name="explain4_1">1.该window失去焦点,因此输入框等控件将无法进行交互使用</string>
+    <string name="explain4_2">2.当前焦点依然存在于此窗口后面的任何可聚焦窗口</string>
+    <string name="explain4_3">3.无论是否显式设置，将强制启用FLAG_NOT_TOUCH_MODAL。</string>
+    <string name="explain4_4">4.此标志还意味着该window不需要与软输入法交互,因此,在Z顺序上,该window的位置将在任何输入法之上。可以使用FLAG_ALT_FOCUSABLE_IM来修改此行为。</string>
+
+    <string name="btn5">FLAG_NOT_TOUCHABLE</string>
+    <string name="explain5_1">1.这个window永远无法获取点击事件,输入框等控件也无法使用。事件将传入该window后面的可以获取点击事件的窗口</string>
+    <string name="explain5_2">2.当焦点在当前window中,则当前window后面的窗口中的输入框将无法使用</string>
+
+    <string name="btn6">FLAG_NOT_TOUCH_MODAL</string>
+    <string name="explain6_1">1.当该window处于显示状态的时候,允许window之外的点击事件传递给其它的在其之后的window</string>
+    <string name="explain6_2">2.不考虑受其它设置的影响,该window显示的时候获取到焦点,所以在其之后的window中的需要焦点的组件如输入框等是不可用的</string>
+    <string name="explain6_3">3.不设置该属性,当前window将消耗所有事件，而不管它们是否在窗口内。</string>
+
+    <string name="btn7">FLAG_TOUCHABLE_WHEN_WAKING</string>
+    <string name="btn8">FLAG_KEEP_SCREEN_ON</string>
+    <string name="btn9">FLAG_LAYOUT_IN_SCREEN</string>
+    <string name="btn10">FLAG_LAYOUT_NO_LIMITS</string>
+    <string name="btn11">FLAG_FULLSCREEN</string>
+    <string name="btn12">FLAG_FORCE_NOT_FULLSCREEN</string>
+    <string name="btn13">FLAG_DITHER</string>
+    <string name="btn14">FLAG_SECURE</string>
+    <string name="btn15">FLAG_SCALED</string>
+    <string name="btn16">FLAG_IGNORE_CHEEK_PRESSES</string>
+    <string name="btn17">FLAG_LAYOUT_INSET_DECOR</string>
+    <string name="btn18">FLAG_WATCH_OUTSIDE_TOUCH</string>
+    <string name="btn19">FLAG_ALT_FOCUSABLE_IM</string>
+    <string name="btn20">FLAG_WATCH_OUTSIDE_TOUCH</string>
+    <string name="btn21">FLAG_SHOW_WHEN_LOCKED</string>
+    <string name="btn22">FLAG_SHOW_WALLPAPER</string>
+    <string name="btn23">FLAG_TURN_SCREEN_ON</string>
+    <string name="btn24">FLAG_DISMISS_KEYGUARD</string>
+    <string name="btn25">FLAG_SPLIT_TOUCH</string>
+    <string name="btn26">FLAG_HARDWARE_ACCELERATED</string>
+    <string name="btn27">FLAG_LAYOUT_IN_OVERSCAN</string>
+    <string name="btn28">FLAG_TRANSLUCENT_STATUS</string>
+    <string name="btn29">FLAG_TRANSLUCENT_MAVIGATION</string>
+    <string name="btn30">FLAG_LOCAL_FOCUS_MODE</string>
+    <string name="btn31">FLAG_SLIPPERY</string>
+    <string name="btn32">FLAG_LAYOUT_ATTACHED_IN_DECOR</string>
+    <string name="btn33">FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS</string>
+
+
 </resources>
