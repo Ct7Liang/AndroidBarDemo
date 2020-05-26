@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".child.Main17Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <TextView
+            android:text="@string/explain17_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/explain17_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/explain17_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/explain17_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/cb1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="13sp"
+            android:text="标记: FLAG_LAYOUT_IN_SCREEN"
+            android:layout_marginLeft="15dp"/>
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/cb2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="13sp"
+            android:text="标记: FLAG_LAYOUT_INSET_DECOR"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:text="BottomView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="#F9C126"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

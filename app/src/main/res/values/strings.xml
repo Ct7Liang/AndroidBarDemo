@@ -24,19 +24,63 @@
     <string name="explain6_3">3.不设置该属性,当前window将消耗所有事件，而不管它们是否在窗口内。</string>
 
     <string name="btn7">FLAG_TOUCHABLE_WHEN_WAKING</string>
+
     <string name="btn8">FLAG_KEEP_SCREEN_ON</string>
+    <string name="explain8_1">1.只在该窗体下,让屏幕保持常亮</string>
+
     <string name="btn9">FLAG_LAYOUT_IN_SCREEN</string>
+
+
     <string name="btn10">FLAG_LAYOUT_NO_LIMITS</string>
+    <string name="explain10_1">\t\t这window大小不再不受手机屏幕大小限制，即window可能超出屏幕之外，这时部分内容在屏幕之外。</string>
+    <string name="explain10_2">1.启用该属性后:窗口会延伸至顶部状态栏和底部导航栏(状态栏和导航栏变为透明)</string>
+    <string name="explain10_3">2.清除该属性后:窗口会给顶部状态栏和底部导航栏预留空间</string>
+    <string name="explain10_4">3.扩大窗口之后,在启用该属性的时候,窗口居中;在禁用该属性的时候,窗口显示左上角</string>
+    <string name="explain10_5">4.缩小窗口之后,在启用或禁用该属性的时候,窗口都是居中的</string>
+
     <string name="btn11">FLAG_FULLSCREEN</string>
+    <string name="explain11_1">\t\t让window进行全屏显示</string>
+    <string name="explain11_2">1.启用该属性后: 窗口会遮盖掉状态栏</string>
+    <string name="explain11_3">2.window全屏,但并不会遮盖掉导航栏</string>
+
     <string name="btn12">FLAG_FORCE_NOT_FULLSCREEN</string>
+    <string name="explain12_1">\t\t恢复window非全屏显示</string>
+    <string name="explain12_2">1.启用该属性之后,在全屏模式下,强制显示状态栏,否则,状态栏需要用户主动去交互才会显示,数秒后再次自动消失</string>
+    <string name="explain12_3">2.该属性仅在全屏模式下有效</string>
+
     <string name="btn13">FLAG_DITHER</string>
+
     <string name="btn14">FLAG_SECURE</string>
+    <string name="explain14_1">\t\t系统会把当前窗口的内容视为安全隐私内容, 系统会阻止这些内容被截屏或者在不安全可靠的场景显示出来</string>
+    <string name="explain14_2">\t\t1.阻止屏幕截图</string>
+    <string name="explain14_3">\t\t2.在Recent apps(任务切换界面)中只显示应用名字和图标, 不显示内容</string>
+    <string name="explain14_4">\t\t3.Google App的Now on tap功能不会去分析你的页面的内容</string>
+
     <string name="btn15">FLAG_SCALED</string>
     <string name="btn16">FLAG_IGNORE_CHEEK_PRESSES</string>
+
     <string name="btn17">FLAG_LAYOUT_INSET_DECOR</string>
+    <string name="explain17_1">保证布局视图不会被屏幕装饰物(状态栏或导航栏)所覆盖遮挡</string>
+    <string name="explain17_2">\t\t1.两个FLAG需一起使用,缺一不可</string>
+    <string name="explain17_3">\t\t2.两个FLAG为系统默认自带</string>
+    <string name="explain17_4">\t\t3.FLAG_LAYOUT_INSET_DECOR在AndroidR中已被废弃</string>
+
     <string name="btn18">FLAG_WATCH_OUTSIDE_TOUCH</string>
+    <string name="explain18_1">监听窗口之外的触摸事件</string>
+    <string name="explain18_2">\t\t1.需与FLAG_NOT_TOUCH_MODAL合用,否则无效</string>
+    <string name="explain18_3">\t\t2.设置了该属性之后,FLAG_NOT_TOUCH_MODAL将消费外部的触摸事件(点击之后外部,弹窗消失)</string>
+    <string name="explain18_4">\t\t3.与FLAG_NOT_TOUCH_MODAL一起设置之后，外部的触摸事件会触发一个带有MotionEvent.ACTION_OUTSIDE的特殊MotionEvent。请注意，您将不会收到完整的向下/移动/向上手势，只有第一个向下的位置作为外部操作。</string>
+    <string name="explain18_5">\t\t4.与FLAG_NOT_TOUCH_MODAL一起设置之后，将不会收到完整的向下/移动/向上手势，只有第一个向下的位置作为外部操作。</string>
+
     <string name="btn19">FLAG_ALT_FOCUSABLE_IM</string>
-    <string name="btn20">FLAG_WATCH_OUTSIDE_TOUCH</string>
+    <string name="explain19_1">控制窗口是否可以与输入法进行交互</string>
+    <string name="explain19_2">\t\t1.设置而改属性之后,无法和输入法进行交互操作</string>
+    <string name="explain19_3">\t\t2.与FLAG_NOT_FOCUSABLE结合使用时，此标志无效，因为输入方法原本就无法和设置了FLAG_NOT_FOCUSABLE标志的窗口进行交互。</string>
+
+    <string name="btn20">FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS</string>
+    <string name="explain20_1">控制窗口中系统栏的颜色</string>
+    <string name="explain20_2">\t\t1.如果设置了此选项，系统栏将以透明背景绘制，并且此窗口中的相应区域将填充window#getStatusBarColor()和window#getNavigationBarColor()中指定的颜色。</string>
+
     <string name="btn21">FLAG_SHOW_WHEN_LOCKED</string>
     <string name="btn22">FLAG_SHOW_WALLPAPER</string>
     <string name="btn23">FLAG_TURN_SCREEN_ON</string>
@@ -49,7 +93,44 @@
     <string name="btn30">FLAG_LOCAL_FOCUS_MODE</string>
     <string name="btn31">FLAG_SLIPPERY</string>
     <string name="btn32">FLAG_LAYOUT_ATTACHED_IN_DECOR</string>
-    <string name="btn33">FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS</string>
+
+    <string name="systemUI">setSystemUiVisibility(int visibility)</string>
+
+    <string name="systemUI_01">SYSTEM_UI_FLAG_VISIBLE</string>
+    <string name="systemUI_01_e">\t\t用户表示状态栏可见，默认flag</string>
+
+    <string name="systemUI_02">SYSTEM_UI_FLAG_FULLSCREEN</string>
+    <string name="systemUI_02_e">\t\t全屏模式，占据整个屏幕，隐藏状态栏等界面，不过导航栏不会隐藏。如果用户进行操作，隐藏的系统界面会立马出现并清除该flag。</string>
+
+    <string name="systemUI_03">SYSTEM_UI_FLAG_HIDE_NAVIGATION</string>
+    <string name="systemUI_03_e">\t\t隐藏导航栏，布局会往下移。如果用户进行操作，导航栏会立马出现并清除该flag。</string>
+
+    <string name="systemUI_04">SYSTEM_UI_FLAG_IMMERSIVE</string>
+    <string name="systemUI_04_e">\t\t仅能和SYSTEM_UI_FLAG_HIDE_NAVIGATION共同使用，使用户操作不再显示导航栏（但是仍能通过从底部往上滑调出导航栏并清除flag）。单独使用无效。(最低api=19)</string>
+
+    <string name="systemUI_05">SYSTEM_UI_FLAG_IMMERSIVE_STICKY</string>
+    <string name="systemUI_05_e">\t\t仅能和SYSTEM_UI_FLAG_FULLSCREEN或SYSTEM_UI_FLAG_HIDE_NAVIGATION共同使用。用户操作不再清除flag，从边缘滑入可以调出状态栏和导航栏，并且过几秒之后自动隐藏。单独使用无效。(最低api=19)</string>
+
+    <string name="systemUI_06">SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN</string>
+    <string name="systemUI_06_e">\t\t不隐藏状态栏，但是app会占满屏幕，但是会被状态栏遮盖住。</string>
+
+    <string name="systemUI_07">SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION</string>
+    <string name="systemUI_07_e">\t\t不隐藏导航栏，但是app会占满屏幕，但是会被导航栏遮盖住。</string>
+
+    <string name="systemUI_08">SYSTEM_UI_FLAG_LAYOUT_STABLE</string>
+    <string name="systemUI_08_e">\t\t此View一般和SYSTEM_UI_FLAG_FULLSCREEN或SYSTEM_UI_FLAG_HIDE_NAVIGATION等隐藏系统控件的FLAG一起使用，它可以保证在系统控件隐藏显示时，不会让本view重新layout。也就是你手动隐藏状态栏或导航栏时，所有的view也都待在本来的位置上不会动。</string>
+
+    <string name="systemUI_09">SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR</string>
+    <string name="systemUI_09_e">\t\t导航栏变为亮色模式，白底黑字(最低api=26)</string>
+
+    <string name="systemUI_10">SYSTEM_UI_FLAG_LIGHT_STATUS_BAR</string>
+    <string name="systemUI_10_e">\t\t状态栏变为亮色模式，白底黑字(最低api=26)</string>
+
+    <string name="systemUI_11">SYSTEM_UI_LAYOUT_FLAGS</string>
+    <string name="systemUI_11_e">\t\t效果相当于 SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN</string>
+
+    <string name="systemUI_12">SYSTEM_UI_FLAG_LOW_PROFILE</string>
+    <string name="systemUI_12_e">\t\t低调模式，我们可以设置该标签让状态栏或导航栏上的图标变暗和让一些不重要的图标消失。适用一些全屏操作，比如游戏，阅读等。(在页面有任何交互时，会被清除，样式还原。)</string>
 
 
 </resources>

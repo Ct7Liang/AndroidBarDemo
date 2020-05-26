@@ -132,7 +132,7 @@
             <Button
                 android:onClick="onClick"
                 android:id="@+id/btn15"
-                android:text="@string/btn2"
+                android:text="@string/btn15"
                 android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -269,14 +269,6 @@
                 android:onClick="onClick"
                 android:id="@+id/btn32"
                 android:text="@string/btn32"
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:onClick="onClick"
-                android:id="@+id/btn33"
-                android:text="@string/btn33"
                 android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

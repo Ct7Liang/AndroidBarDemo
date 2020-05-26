@@ -6,10 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.android.ct7liang.neatmusic.child.Main10Activity;
+import com.android.ct7liang.neatmusic.child.Main11Activity;
+import com.android.ct7liang.neatmusic.child.Main13Activity;
+import com.android.ct7liang.neatmusic.child.Main14Activity;
+import com.android.ct7liang.neatmusic.child.Main16Activity;
+import com.android.ct7liang.neatmusic.child.Main17Activity;
 import com.android.ct7liang.neatmusic.child.Main2Activity;
+import com.android.ct7liang.neatmusic.child.Main3Activity;
 import com.android.ct7liang.neatmusic.child.Main4Activity;
 import com.android.ct7liang.neatmusic.child.Main5Activity;
 import com.android.ct7liang.neatmusic.child.Main6Activity;
+import com.android.ct7liang.neatmusic.child.Main7Activity;
+import com.android.ct7liang.neatmusic.child.Main8Activity;
+import com.android.ct7liang.neatmusic.child.Main9Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
 
     public void onClick(View view){
@@ -48,43 +56,43 @@ public class MainActivity extends AppCompatActivity {
                 showToast(DISCARD);
                 break;
             case R.id.btn8:
-                showToast(0);
+                startActivity(new Intent(this, Main8Activity.class));
                 break;
             case R.id.btn9:
-                showToast(0);
+                startActivity(new Intent(this, Main17Activity.class));
                 break;
             case R.id.btn10:
-                showToast(0);
+                startActivity(new Intent(this, Main10Activity.class));
                 break;
             case R.id.btn11:
-                showToast(0);
+                startActivity(new Intent(this, Main11Activity.class));
                 break;
             case R.id.btn12:
-                showToast(0);
+                startActivity(new Intent(this, Main13Activity.class));
                 break;
             case R.id.btn13:
-                showToast(0);
+                showToast(DISCARD);
                 break;
             case R.id.btn14:
-                showToast(0);
+                startActivity(new Intent(this, Main14Activity.class));
                 break;
             case R.id.btn15:
                 showToast(0);
                 break;
             case R.id.btn16:
-                showToast(0);
+                showToast(UNCLEAR);
                 break;
             case R.id.btn17:
-                showToast(0);
+                startActivity(new Intent(this, Main17Activity.class));
                 break;
             case R.id.btn18:
-                showToast(0);
+                startActivity(new Intent(this, Main9Activity.class));
                 break;
             case R.id.btn19:
-                showToast(0);
+                startActivity(new Intent(this, Main3Activity.class));
                 break;
             case R.id.btn20:
-                showToast(0);
+                startActivity(new Intent(this, Main7Activity.class));
                 break;
             case R.id.btn21:
                 showToast(0);
@@ -120,9 +128,6 @@ public class MainActivity extends AppCompatActivity {
                 showToast(0);
                 break;
             case R.id.btn32:
-                showToast(0);
-                break;
-            case R.id.btn33:
                 showToast(0);
                 break;
         }

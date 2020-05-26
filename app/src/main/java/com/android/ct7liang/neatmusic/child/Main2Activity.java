@@ -60,9 +60,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                     ad2.getWindow().setDimAmount(0.3f);
 
 //                  //修改当前window后面的window的透明度 方法2
-//                  WindowManager.LayoutParams attributes = ad.getWindow().getAttributes();
+//                  WindowManager.LayoutParams attributes = ad2.getWindow().getAttributes();
 //                  attributes.dimAmount = 0.3f;
-//                  ad.getWindow().setAttributes(attributes);
+//                  ad2.getWindow().setAttributes(attributes);
 
                     ad2.show();
                 }
