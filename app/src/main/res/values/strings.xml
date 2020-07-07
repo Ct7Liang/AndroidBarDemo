@@ -2,11 +2,16 @@
     <string name="app_name">WindowFlags</string>
 
     <string name="btn1">FLAG_ALLOW_LOCK_WHILE_SCREEN_ON</string>
-    <string name="explain1_1">1.当该window显示的时候,置于该window之后的window会变暗。</string>
+    <string name="explain1_btn1">
+        只要这个window对用户是可见的,则允许在屏幕开启的时候锁定屏幕
+        这个flag可以单独的使用,也可以配合FLAG_KEEP_SCREEN_ON和(或者) FLAG_SHOW_WHEN_LOCKED使用
+    </string>
 
     <string name="btn2">FLAG_DIM_BEHIND</string>
+    <string name="explain1_1">1.当该window显示的时候,置于该window之后的window会变暗。</string>
 
     <string name="btn3">FLAG_BLUR_BEHIND</string>
+    <string name="explain3_1">FLAG_BLUR_BEHIND</string>
 
     <string name="btn4">FLAG_NOT_FOCUSABLE</string>
     <string name="explain4_1">1.该window失去焦点,因此输入框等控件将无法进行交互使用</string>
@@ -24,6 +29,7 @@
     <string name="explain6_3">3.不设置该属性,当前window将消耗所有事件，而不管它们是否在窗口内。</string>
 
     <string name="btn7">FLAG_TOUCHABLE_WHEN_WAKING</string>
+    <string name="explaint7_1">当设置了这个值,则device休眠的时候,当触摸屏被点击,window会收到首次点击事件,通常当用户看不见东西时,首次点击事件会被系统消费</string>
 
     <string name="btn8">FLAG_KEEP_SCREEN_ON</string>
     <string name="explain8_1">1.只在该窗体下,让屏幕保持常亮</string>
@@ -49,6 +55,7 @@
     <string name="explain12_3">2.该属性仅在全屏模式下有效</string>
 
     <string name="btn13">FLAG_DITHER</string>
+    <string name="explain13_1">FLAG_DITHER</string>
 
     <string name="btn14">FLAG_SECURE</string>
     <string name="explain14_1">\t\t系统会把当前窗口的内容视为安全隐私内容, 系统会阻止这些内容被截屏或者在不安全可靠的场景显示出来</string>
@@ -57,7 +64,15 @@
     <string name="explain14_4">\t\t3.Google App的Now on tap功能不会去分析你的页面的内容</string>
 
     <string name="btn15">FLAG_SCALED</string>
+    <string name="explain15_1">FLAG_SCALED</string>
+
     <string name="btn16">FLAG_IGNORE_CHEEK_PRESSES</string>
+    <string name="explain16_1">
+        这个flag一般用于,当用户把脸贴在屏幕上,它会过滤不需要的点击事件
+        当检测到一个事件流,这个程序会直接接收到一个CANCEL事件.
+        这样程序可以正确的处理这种情况,
+        直到手指离开屏幕
+    </string>
 
     <string name="btn17">FLAG_LAYOUT_INSET_DECOR</string>
     <string name="explain17_1">保证布局视图不会被屏幕装饰物(状态栏或导航栏)所覆盖遮挡</string>
@@ -82,16 +97,46 @@
     <string name="explain20_2">\t\t1.如果设置了此选项，系统栏将以透明背景绘制，并且此窗口中的相应区域将填充window#getStatusBarColor()和window#getNavigationBarColor()中指定的颜色。</string>
 
     <string name="btn21">FLAG_SHOW_WHEN_LOCKED</string>
+    <string name="explain21_1">
+        一个特殊的flag,使得window可以在锁屏状态下显示
+        这个flag会使得window比keyguard或其他锁屏界面具有更高的层级
+        可以配合FLAG_KEEP_SCREEN_ON使用,点亮屏幕,在显示keyguard window之前显示你的window.
+        可以配合FLAG_DISMISS_KEYGUARD使用来自动解锁没密码的keyguards
+        这个flag只能应用在最顶层的全屏window上
+    </string>
+    <string name="explain21_2">API27中已废弃</string>
+
     <string name="btn22">FLAG_SHOW_WALLPAPER</string>
+    <string name="explain22_1">
+        请求系统将壁纸显示在window后面,这个window表面需要是透明的才能显示出墙纸.
+        这个flag只能保证如果你的window有透明的区域,墙纸会显示在那
+    </string>
+
     <string name="btn23">FLAG_TURN_SCREEN_ON</string>
+    <string name="explain23_1">当window被添加或者显示,系统会点亮屏幕,就好像用户唤醒屏幕一样</string>
+    <string name="explain23_2">API27中已废弃</string>
+
     <string name="btn24">FLAG_DISMISS_KEYGUARD</string>
+    <string name="explain24_1">当使用的是无密码的锁屏界面,显示此window会使锁屏界面被自动解锁</string>
+    <string name="explain24_2">API26中已废弃</string>
+
     <string name="btn25">FLAG_SPLIT_TOUCH</string>
+    <string name="explain25_1">
+        当window设置这个flag,window会接收来自window边界之外发送给其他window的点击事件,支持多点触控.
+        当这个flag没有设置的时候,第一下点击则决定了哪个window会接收整个点击事件,直到手指拿开.
+        当设置了这个flag,这每一个点击事件(不一定是第一个)都决定了那个window来接收剩下的点击事件,直到手指拿开.点击事件会被分开传递给多个window
+    </string>
+
     <string name="btn26">FLAG_HARDWARE_ACCELERATED</string>
+    <string name="explain26_1">硬件加速</string>
+
     <string name="btn27">FLAG_LAYOUT_IN_OVERSCAN</string>
+
     <string name="btn28">FLAG_TRANSLUCENT_STATUS</string>
     <string name="btn29">FLAG_TRANSLUCENT_MAVIGATION</string>
+
     <string name="btn30">FLAG_LOCAL_FOCUS_MODE</string>
-    <string name="btn31">FLAG_SLIPPERY</string>
+    <!--<string name="btn31">FLAG_SLIPPERY</string>-->
     <string name="btn32">FLAG_LAYOUT_ATTACHED_IN_DECOR</string>
 
     <string name="systemUI">setSystemUiVisibility(int visibility)</string>
@@ -131,6 +176,13 @@
 
     <string name="systemUI_12">SYSTEM_UI_FLAG_LOW_PROFILE</string>
     <string name="systemUI_12_e">\t\t低调模式，我们可以设置该标签让状态栏或导航栏上的图标变暗和让一些不重要的图标消失。适用一些全屏操作，比如游戏，阅读等。(在页面有任何交互时，会被清除，样式还原。)</string>
+    <string name="title_activity_test4">Test4Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>
