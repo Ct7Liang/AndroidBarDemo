@@ -28,7 +28,7 @@ public class TranslateBarTestActivity extends AppCompatActivity implements View.
         findViewById(R.id.btn4).setOnClickListener(this);
 
     }
-    
+
     private void empty(){
         Toast.makeText(this, "122121212", Toast.LENGTH_SHORT).show();
     }
