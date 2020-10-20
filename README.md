@@ -1,6 +1,21 @@
 ### TranslateStatusBar
 
-` implementation 'com.github.Ct7Liang:AndroidBarDemo:1.0.0' `
+##### 引入
+
+project -> build.gradle
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+app -> build.gradle
+```
+implementation 'com.github.Ct7Liang:AndroidBarDemo:1.0.0'
+```
 
 ##### 使用
 
@@ -14,4 +29,4 @@ TranslateStatusBar.cancel(this);
 ```
 
 ##### demo
-<a href="https://github.com/Ct7Liang/AndroidBarDemo/tree/master/app/release/app-release.apk" target="_blank">demo</a>
+<a href="https://github.com/Ct7Liang/AndroidBarDemo/tree/master/app/release/app-release.apk" target="_blank">app</a>
