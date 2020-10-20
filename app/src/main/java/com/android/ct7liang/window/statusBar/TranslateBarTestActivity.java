@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.android.ct7liang.window.MainActivity;
 import com.android.ct7liang.window.R;
 import com.ct7liang.translatestatusbar.TranslateStatusBar;
 
@@ -26,13 +27,8 @@ public class TranslateBarTestActivity extends AppCompatActivity implements View.
         findViewById(R.id.btn2).setOnClickListener(this);
         findViewById(R.id.btn3).setOnClickListener(this);
         findViewById(R.id.btn4).setOnClickListener(this);
-
+        findViewById(R.id.btn5).setOnClickListener(this);
     }
-
-    private void empty(){
-        Toast.makeText(this, "122121212", Toast.LENGTH_SHORT).show();
-    }
-
 
     @Override
     public void onClick(View v) {
@@ -43,18 +39,16 @@ public class TranslateBarTestActivity extends AppCompatActivity implements View.
             case R.id.btn2:
                 startActivity(new Intent(this, Test2Activity.class));
                 break;
-
             case R.id.btn4:
                 startActivity(new Intent(this, Test4Activity.class));
                 break;
-
             case R.id.btn3:
                 startActivity(new Intent(this, Test3Activity.class));
                 break;
+            case R.id.btn5:
+                startActivity(new Intent(this, MainActivity.class));
+                break;
         }
     }
-
-
-
 
 }

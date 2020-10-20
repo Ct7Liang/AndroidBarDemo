@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WindowFlags</string>
+    <string name="app_name">AndroidBarDemo</string>
 
     <string name="btn1">FLAG_ALLOW_LOCK_WHILE_SCREEN_ON</string>
     <string name="explain1_btn1">
